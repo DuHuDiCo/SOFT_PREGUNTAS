@@ -1,0 +1,183 @@
+.caja{
+    background-color: #1b1b1b;
+
+
+    min-height: 100vh;
+
+}
+header{
+    text-align: center;
+    background: #000;
+    color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 35px 60px 0 rgb(255, 255, 255);
+}
+
+footer{
+    background: #111;
+    height: auto;
+    width: auto;
+    font-family: "Open Sans";
+    padding-top: 40px;
+    color: #fff;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+.footer-bottom{
+    background: #1b1b1b;
+    width: auto;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+.wrapper{
+    position: absolute;
+    width: auto;
+}
+
+.wrapper ul{
+    list-style: none;
+}
+
+.wrapper ul li{
+    width: 75px;
+    height: 75px;
+    line-height: 75px;
+    margin: 0 10px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 5px solid #d8e2dc;
+    float: left;
+    transition: all 0.5s ease;
+}
+
+.wrapper ul li .fa{
+    color: #d8e2dc;
+    margin-top: 20px;
+    transition: all 0.5s ease;
+}
+
+.wrapper ul li:hover .whatsapp {
+    border: 5px solid #4dc247;
+    box-shadow:  0 0 15px #4dc247;
+    transition:  all 0.5s ease;
+}
+
+.wrapper ul li:hover .fa-whatsapp {
+    color:#4dc247;
+    text-shadow:  0 0 15px #4dc247;
+    transition:  all 0.5s ease;
+}
+
+
+.iconos ul li:hover .facebook{
+    border: 5px solid #224899;
+    box-shadow:  0 0 15px #224899;
+    transition:  all 0.5s ease;
+}
+.iconos ul li:hover .fa-facebook{
+    color:#224899;
+    text-shadow:  0 0 15px #224899;
+    transition:  all 0.5s ease;
+}
+
+.iconos ul li:hover .instagram{
+    border: 5px solid #59165f;
+    box-shadow:  0 0 15px #59165f;
+    transition:  all 0.5s ease;
+}
+.iconos ul li:hover .fa-instagram{
+    color:#59165f;
+    text-shadow:  0 0 15px #59165f;
+    transition:  all 0.5s ease;
+}
+
+.iconos ul li:hover .google{
+    border: 5px solid #b80b0b;
+    box-shadow:  0 0 15px #b80b0b;
+    transition:  all 0.5s ease;
+}
+.iconos ul li:hover .fa-google{
+    color:#b80b0b;
+    text-shadow:  0 0 15px #b80b0b;
+    transition:  all 0.5s ease;
+}
+
+@media screen and (max-width: 640px) {
+    .wrapper {
+        width: 350px;
+    }
+    .wrapper ul li {
+        margin-top: 10px;
+    }
+    .wrapper ul li.google {
+        margin-left: 60px;
+    }
+}
+@media screen and (max-width: 640px) {
+    .iconos {
+        width: 350px;
+    }
+    .iconos ul li {
+        margin-top: 10px;
+    }
+    .iconos ul li.google {
+        margin-left: 60px;
+    }
+}
+
+.iconos ul li{
+    width: 75px;
+    height: 75px;
+    line-height: 75px;
+    margin: 0 10px;
+    text-align: center;
+    cursor: pointer;
+    float: left;
+    transition: all 0.5s ease;
+}
+.iconos{
+    position: absolute;
+    width: auto;
+}
+
+.iconos ul{
+    list-style: none;
+}
+
+.iconos ul li .fa{
+    color: #d8e2dc;
+    margin-top: 20px;
+    transition: all 0.5s ease;
+}
