@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { DatosUsuarioComponent } from './paginas/datos-usuario/datos-usuario.component';
 import { FormularioComponent } from './paginas/formulario/formulario.component';
 import { ResultadosComponent } from './paginas/resultados/resultados.component';
@@ -17,6 +18,11 @@ const routes: Routes = [
       component:DatosUsuarioComponent,
       children:[]
     },
+    // {
+    //   path:'cargando',
+    //   component:CargandoComponent,
+    //   pathMatch:'full'
+    // }
 ];
 
 @NgModule({

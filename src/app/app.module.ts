@@ -8,17 +8,24 @@ import { FormularioComponent } from './paginas/formulario/formulario.component';
 import { ResultadosComponent } from './paginas/resultados/resultados.component';
 import { DatosUsuarioComponent } from './paginas/datos-usuario/datos-usuario.component';
 
+import { PreguntasComponent } from './paginas/formulario/preguntas/preguntas.component';
+import { CargandoComponent } from './paginas/formulario/cargando/cargando.component';
+import { NgToastModule } from 'ng-angular-popup';
+
 @NgModule({
   declarations: [
     AppComponent,
     FormularioComponent,
     ResultadosComponent,
-    DatosUsuarioComponent
+    DatosUsuarioComponent,
+    PreguntasComponent,
+    CargandoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgToastModule
   ],
   providers: [],
   bootstrap: [AppComponent]

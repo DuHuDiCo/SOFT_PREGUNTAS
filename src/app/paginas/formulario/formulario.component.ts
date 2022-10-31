@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-formulario',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormularioComponent implements OnInit {
 
-  constructor() { }
+  
+
+  @Input() valid = true;
+
+  
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
+  }
+
+  getMensaje(e:any){
+    this.valid = e;
+    setTimeout(() => {
+      this.router.navigate(['datos-usuario']);
+    }, 5000);
   }
 
 }

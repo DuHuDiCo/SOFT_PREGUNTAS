@@ -1,0 +1,89 @@
+<header>
+
+    <strong><h1>Preguntas</h1></strong>
+    <p>Nos interesa saber un poco mas de ti</p>
+</header><br>
+
+<div class="container">
+    <section id="p0">
+        <h3>3)- ¿En que estas interesado?</h3>
+        <label>
+            <input [(ngModel)]="peticion.categoria.categoria" type="radio" value="lavado" name="p0"> Lavado
+        </label>
+        <label>
+            <input [(ngModel)]="peticion.categoria.categoria" type="radio" value="refrigeracion" name="p0"> Refrigeracion
+        </label>
+        <label>
+            <input [(ngModel)]="peticion.categoria.categoria" type="radio" value="cocina" name="p0"> Cocina
+        </label>
+    </section><br>
+
+    <section id="p1">
+        <h3>1)- ¿De que tamaño es tu vivienda?</h3>
+        <label>
+            <input [(ngModel)]="peticion.vivienda.m2" type="radio" value="1" name="m2"> 0 - 65m²
+        </label>
+        <label>
+            <input [(ngModel)]="peticion.vivienda.m2" type="radio" value="2" name="m2"> 66 - 100m²
+        </label>
+        <label>
+            <input [(ngModel)]="peticion.vivienda.m2" type="radio" value="3" name="m2"> 101 - 140m²
+        </label>
+        <label>
+            <input [(ngModel)]="peticion.vivienda.m2" type="radio" value="4" name="m2"> Mas de 140m²
+        </label>
+    </section><br>
+
+    <section id="p2">
+        <h3>2)- ¿Cuantos integrantes hay en tu hogar?</h3>
+        <label>
+            <input [(ngModel)]="peticion.integrantes.cantidad" type="radio" value="1" name="cantidad"> 1
+        </label>
+        <label>
+            <input [(ngModel)]="peticion.integrantes.cantidad" type="radio" value="2" name="cantidad"> 2
+        </label>
+        <label>
+            <input [(ngModel)]="peticion.integrantes.cantidad" type="radio" value="4" name="cantidad"> Mas de 3
+        </label>
+    </section><br>
+
+    <section id="p3">
+        <h3>¡Anota tu presupuesto!</h3>
+        
+        <label *ngIf="peticion.categoria.categoria == 'lavado' || peticion.categoria.categoria == 'refrigeracion' || peticion.categoria.categoria == ''" >
+            <input [(ngModel)]="peticion.presupuesto.presupuesto"  type="radio" value="2" name="presupuesto"> 1'000.000 - 2'000.000
+            
+        </label>
+        <label *ngIf="peticion.categoria.categoria == 'lavado' || peticion.categoria.categoria == 'refrigeracion' || peticion.categoria.categoria == ''" >
+            <input [(ngModel)]="peticion.presupuesto.presupuesto"  type="radio" value="3" name="presupuesto"> 2'000.000 - 3'000.000
+            
+        </label>
+        <label *ngIf="peticion.categoria.categoria == 'lavado' || peticion.categoria.categoria == 'refrigeracion' || peticion.categoria.categoria == ''">
+            <input [(ngModel)]="peticion.presupuesto.presupuesto" type="radio" value="4" name="presupuesto"> mas de 3'000.000
+
+        </label>
+        <label  *ngIf="peticion.categoria.categoria == 'cocina'">
+            
+            <input [(ngModel)]="peticion.presupuesto.presupuesto" type="radio" value="2" name="presupuesto"> Menos 800.000
+        </label>
+        <label *ngIf="peticion.categoria.categoria == 'cocina'">
+            
+            <input [(ngModel)]="peticion.presupuesto.presupuesto" type="radio" value="2" name="presupuesto"> Mas 800.000
+        </label >
+        <label *ngIf="peticion.categoria.categoria == 'cocina'">
+            <input [(ngModel)]="peticion.presupuesto.presupuesto" type="radio" value="2" name="presupuesto"> Mas 1'000.000
+        </label>
+    </section><br>
+
+
+    <div class="caja">    
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" [(ngModel)]="peticion.autorizacionTratamientoDatos.acepto" name="acepto">
+            <label class="form-check-label" for="flexCheckDefault">
+                para dar permiso al tratamiento de datos por favor marcar la casilla para poder seguir con el proceso
+            </label>
+        </div>
+    </div><br>
+
+    <input  (click)="enviarDatos();" class="fadeIn fourth enviar" value="Guardar datos" >
+</div>

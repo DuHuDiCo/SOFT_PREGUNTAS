@@ -1,0 +1,77 @@
+*{
+    box-sizing: border-box;
+    font-family:'Courier New', Courier, monospace;
+}
+
+header{
+    text-align: center;
+    background: #000;
+    color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 35px 60px 0 rgba(236, 2, 2, 0.3);
+    text-shadow: 0 0 5px #3d0101,
+    0 0 25px #a10f0f,
+    0 0 50px #e90303,
+    0 0 100px #e90303;
+}
+
+.container{
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+}
+
+section{
+    border: 2px solid #eb0808;
+    border-radius: 7px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+label{
+    display: block;
+    padding: 7px;
+    border-radius: 7px;
+    cursor: pointer;
+    border: 1px dashed #ccc;
+    margin-bottom: 3px;
+}
+
+label:hover{
+    background: #cec0fc;
+}
+
+.tdatos{
+    background-color: #ccc;
+}
+
+
+input[type=button], input[type=submit], input[type=reset] {
+    display: block;
+    margin: auto;
+    padding: 10px;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.enviar{
+    display: block;
+    margin: auto;
+    padding: 10px;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+
+.enviar:hover{
+    background-color: #c50e0e;
+}
+input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
+background-color: #c50e0e;
+}
