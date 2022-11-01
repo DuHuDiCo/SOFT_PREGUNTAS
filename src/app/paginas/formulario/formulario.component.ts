@@ -34,6 +34,7 @@ export class FormularioComponent implements OnInit {
       (data:any)=>{
         this.getMensaje(false);            
         this.preguntasService.setProducto(data);
+        console.log(data)
       },(error:any)=>{
         console.log(error);
       }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { PeticionService } from 'src/app/service/peticion.service';
 
@@ -8,7 +8,8 @@ import { PeticionService } from 'src/app/service/peticion.service';
   styleUrls: ['./resultados.component.css']
 })
 export class ResultadosComponent implements OnInit {
-
+  @ViewChild("img1")
+  im1!: ElementRef<HTMLImageElement>;
 
   producto = {
     id:0,
@@ -50,11 +51,16 @@ export class ResultadosComponent implements OnInit {
     }
   }
 
-  constructor(private peticionService:PeticionService, private router:Router) { }
+  archivos:any = [];
+
+  constructor(private peticionService:PeticionService, private router:Router, private render2:Renderer2) { }
 
   ngOnInit(): void {
     this.getProducto();
     this.getPeticion();
+    this.archivos = this.producto.archivos;
+    
+
   }
 
   public getPeticion(){
@@ -64,6 +70,14 @@ export class ResultadosComponent implements OnInit {
 
   public getProducto(){
     this.producto = this.peticionService.getProducto();
+    
+  }
+
+  public img(){
+    let ima = this.im1.nativeElement;
+    let base = "data:image/jpeg;base64,"+this.archivos[0].ruta
+    
+    this.render2.setProperty(ima, 'src', base)
   }
 
 
