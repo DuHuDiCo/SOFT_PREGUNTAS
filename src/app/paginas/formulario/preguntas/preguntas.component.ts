@@ -39,7 +39,7 @@ export class PreguntasComponent implements OnInit {
 
 
   @Output() miEvento = new EventEmitter<boolean>();
-  @Output() referencia = new EventEmitter<string>();
+  @Output() request = new EventEmitter<any>();
   ngOnInit(): void {
   }
 
@@ -89,6 +89,7 @@ export class PreguntasComponent implements OnInit {
             } else {
 
               this.miEvento.emit(this.valid = false);
+              this.request.emit(this.peticion);
             }
           }
         }

@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { FormularioComponent } from './paginas/formulario/formulario.component';
 import { ResultadosComponent } from './paginas/resultados/resultados.component';
 import { DatosUsuarioComponent } from './paginas/datos-usuario/datos-usuario.component';
-
+import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { PreguntasComponent } from './paginas/formulario/preguntas/preguntas.component';
 import { CargandoComponent } from './paginas/formulario/cargando/cargando.component';
 import { NgToastModule } from 'ng-angular-popup';
@@ -25,7 +25,9 @@ import { NgToastModule } from 'ng-angular-popup';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    NgToastModule
+    NgToastModule,
+    HttpClientModule
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

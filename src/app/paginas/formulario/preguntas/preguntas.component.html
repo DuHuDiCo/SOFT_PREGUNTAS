@@ -51,27 +51,27 @@
         <h3>¡Anota tu presupuesto!</h3>
         
         <label *ngIf="peticion.categoria.categoria == 'lavado' || peticion.categoria.categoria == 'refrigeracion' || peticion.categoria.categoria == ''" >
-            <input [(ngModel)]="peticion.presupuesto.presupuesto"  type="radio" value="2" name="presupuesto"> 1'000.000 - 2'000.000
+            <input [(ngModel)]="peticion.presupuesto.presupuesto"  type="radio" value="1999999" name="presupuesto"> 1'000.000 - 2'000.000
             
         </label>
         <label *ngIf="peticion.categoria.categoria == 'lavado' || peticion.categoria.categoria == 'refrigeracion' || peticion.categoria.categoria == ''" >
-            <input [(ngModel)]="peticion.presupuesto.presupuesto"  type="radio" value="3" name="presupuesto"> 2'000.000 - 3'000.000
+            <input [(ngModel)]="peticion.presupuesto.presupuesto"  type="radio" value="2100000" name="presupuesto"> 2'000.000 - 3'000.000
             
         </label>
         <label *ngIf="peticion.categoria.categoria == 'lavado' || peticion.categoria.categoria == 'refrigeracion' || peticion.categoria.categoria == ''">
-            <input [(ngModel)]="peticion.presupuesto.presupuesto" type="radio" value="4" name="presupuesto"> mas de 3'000.000
+            <input [(ngModel)]="peticion.presupuesto.presupuesto" type="radio" value="3000100" name="presupuesto"> mas de 3'000.000
 
         </label>
         <label  *ngIf="peticion.categoria.categoria == 'cocina'">
             
-            <input [(ngModel)]="peticion.presupuesto.presupuesto" type="radio" value="2" name="presupuesto"> Menos 800.000
+            <input [(ngModel)]="peticion.presupuesto.presupuesto" type="radio" value="799999" name="presupuesto"> Menos 800.000
         </label>
         <label *ngIf="peticion.categoria.categoria == 'cocina'">
             
-            <input [(ngModel)]="peticion.presupuesto.presupuesto" type="radio" value="2" name="presupuesto"> Mas 800.000
+            <input [(ngModel)]="peticion.presupuesto.presupuesto" type="radio" value="800001" name="presupuesto"> Mas 800.000
         </label >
         <label *ngIf="peticion.categoria.categoria == 'cocina'">
-            <input [(ngModel)]="peticion.presupuesto.presupuesto" type="radio" value="2" name="presupuesto"> Mas 1'000.000
+            <input [(ngModel)]="peticion.presupuesto.presupuesto" type="radio" value="1000001" name="presupuesto"> Mas 1'000.000
         </label>
     </section><br>
 

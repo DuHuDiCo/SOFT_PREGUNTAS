@@ -1,5 +1,5 @@
 <div *ngIf="valid">
-    <app-preguntas (miEvento)="getMensaje($event)"></app-preguntas>
+    <app-preguntas  (request)="getPeticion($event)"></app-preguntas>
 </div>
 
 <div *ngIf="!valid">
