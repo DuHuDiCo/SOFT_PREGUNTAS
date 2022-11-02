@@ -22,7 +22,7 @@ header{
 
 .boton-modal label{
     padding: 10px 15px;
-    background-color: #5488a3;
+    background-color: #960010;
     color: #fff;
     border-radius: 4px;
     cursor: pointer;
@@ -30,7 +30,7 @@ header{
 }
 
 .boton-modal label:hover{
-    background-color: #185e83;
+    background-color: #960030;
 }
 /* Fin boton modal */
 

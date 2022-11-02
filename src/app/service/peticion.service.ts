@@ -15,7 +15,11 @@ export class PeticionService {
     idPeticion:''
   }
 
-
+  cliente = {
+    nombre:'',
+    email:'',
+    celular:''
+  }
   peticion = {
     id:'',
     presupuesto: {
@@ -68,6 +72,13 @@ export class PeticionService {
     return this.http.put(`${base}/preguntas/update`, peticion);
   }
 
+  public setCliente(cliente:any){
+    this.cliente = cliente;
+  }
+
+  public getCliente(){
+    return this.cliente;
+  }
 
 
 

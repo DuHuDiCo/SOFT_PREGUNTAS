@@ -5,6 +5,7 @@
     </header><br>
 
     <label class="text">Estos son los productos que te recomendamos : </label><br>
+    <h3 class="text-center">{{producto.nombre}}</h3>
 
     <input type="checkbox" id="btn-modal">
     <div class="container-modal">
@@ -36,24 +37,22 @@
 
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-            <div *ngFor="let a of archivos;let i = index"  class="carousel-item active">
-                <img *ngIf="i == 0" src="{{a.ruta}}" class="d-block w-100" alt="...">
-                
-            </div>
-            <div class="carousel-item">
-                <img src="" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="" class="d-block w-100" alt="...">
+            <div *ngFor="let a of archivos;let i = index">
+
+                <div *ngIf="i == 0" class="carousel-item active">
+                    <img src="{{a.ruta}}" class="d-block w-100" alt="...">
+
+                </div>
+                <div *ngIf="i >0" #noActive class="carousel-item">
+                    <img src="{{a.ruta}}" class="d-block w-100" alt="...">
+                </div>
+
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
             data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+            <span class="">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
             data-bs-slide="next">
@@ -62,15 +61,15 @@
         </button>
     </div><br>
 
-    <label class="text">Para poder seguir con nuestro proceso, te pedimos que porfavor llenes algunos campos que
-        solicitamos los cuales no te quitaran mucho tiempo</label>
+    <label class="text">Si Quieres Obtener Informacion del Producto como Precio, Credito y Mas.. </label>
+    <label class="text text-center">Por favor Dale Click al Boton</label>
 
     <div class="boton-modal">
         <label for="btn-modal">
-            Agregar datos
+            Obtener Informacion
         </label>
     </div>
 
 
-    
+
 </div>

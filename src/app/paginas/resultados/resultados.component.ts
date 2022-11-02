@@ -85,6 +85,7 @@ export class ResultadosComponent implements OnInit {
     
     this.peticion.cliente = this.cliente;
     this.peticion.id = this.producto.idPeticion;
+    this.peticionService.setCliente(this.cliente);
     console.log(this.peticion)
     this.peticionService.enviarCliente(this.peticion).subscribe(
       (data:any)=>{
