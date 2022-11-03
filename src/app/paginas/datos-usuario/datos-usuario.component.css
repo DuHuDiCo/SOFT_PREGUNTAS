@@ -136,7 +136,7 @@ footer{
 
 @media screen and (max-width: 640px) {
     .wrapper {
-        width: 350px;
+        width: auto;
     }
     .wrapper ul li {
         margin-top: 10px;
@@ -145,6 +145,7 @@ footer{
         margin-left: 60px;
     }
 }
+
 @media screen and (max-width: 640px) {
     .iconos {
         width: 350px;
