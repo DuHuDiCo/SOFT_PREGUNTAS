@@ -1,10 +1,8 @@
 .caja{
     background-color: #1b1b1b;
-
-
     min-height: 100vh;
-
 }
+
 header{
     text-align: center;
     background: #000;
@@ -61,6 +59,7 @@ footer{
 }
 
 .wrapper{
+    padding: 10px;
     position: absolute;
     width: auto;
 }
@@ -142,21 +141,10 @@ footer{
         margin-top: 10px;
     }
     .wrapper ul li.google {
-        margin-left: 60px;
+        margin-left: auto;
     }
 }
 
-@media screen and (max-width: 640px) {
-    .iconos {
-        width: 350px;
-    }
-    .iconos ul li {
-        margin-top: 10px;
-    }
-    .iconos ul li.google {
-        margin-left: 60px;
-    }
-}
 
 .iconos ul li{
     width: 75px;
